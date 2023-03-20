@@ -1,0 +1,190 @@
+{
+    "introduction": {
+        "jobPosition": "Junior Artificial Intelligence Engineer",
+        "jobCaption": "Junior level experince in Artificial Intelligence Engineering, and development knowledge, Producing The Best Apps With Good quality"
+    },
+    "about_me": {
+        "summary_description": "Artificial Intelligence Engineer, with extensive knowledge and years of experience, working in machine learning, deep learning and data science techniques, build architecture for neural networks, delivering quality working .",
+        "experience_years": "03+",
+        "projects_count": "10+",
+        "freelancer_projects_count": "02+"
+    },
+    "contact_me_links": {
+        "facebook": "https://www.facebook.com/profile.php?id=100008270864447&mibextid=ZbWKwL",
+        "linkedin": "https://www.linkedin.com/in/ebrahim-massrie-14b6811b0",
+        "github": "https://github.com/EbrahimMassrie963",
+        "instagram": "https://www.instagram.com/ebrahimmassrie/",
+        "email": "ebrahimmassrie963@gmail.com",
+        "tel": "+963931631370"
+    },
+    "skills": [
+        {
+            "id": 1,
+            "skill_name": "Machine Learning",
+            "experience": "1 Year Of Experience",
+            "skill_tech_details": [
+                {
+                    "tech_name": "Advanced Python",
+                    "level": "Excellent"
+                },
+                {
+                    "tech_name": "Supervised Learning",
+                    "level": "Excellent"
+                },
+                {
+                    "tech_name": "Unsupervised Learning",
+                    "level": "Excellent"
+                },
+                {
+                    "tech_name": "Reinforcement Learning",
+                    "level": "Good"
+                },
+                {
+                    "tech_name": "Build Professional Models",
+                    "level": "Very Good"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "skill_name": "Data Scientist",
+            "experience": "1 Year Of Experience",
+            "skill_tech_details": [
+                {
+                    "tech_name": "Data Mining",
+                    "level": "Good"
+                },
+                {
+                    "tech_name": "Big Data",
+                    "level": "Good"
+                },
+                {
+                    "tech_name": "Extract Knowledge From Data",
+                    "level": "Very Good"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "skill_name": "Deep Learning",
+            "experience": "1 Year Of Experience",
+            "skill_tech_details": [
+                {
+                    "tech_name": "Keras",
+                    "level": "Good"
+                },
+                {
+                    "tech_name": "Tendorflow",
+                    "level": "Good"
+                },
+                {
+                    "tech_name": "Pytorch",
+                    "level": "Good"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "skill_name": "Data Analysis",
+            "experience": "1 Year Of Experience",
+            "skill_tech_details": [
+                {
+                    "tech_name": "Advanced Excel",
+                    "level": "Excellent"
+                },
+                {
+                    "tech_name": "MySQL",
+                    "level": "Very Good"
+                },
+                {
+                    "tech_name": "Pandas",
+                    "level": "Very Good"
+                },
+                {
+                    "tech_name": "Matplotlib",
+                    "level": "Very Good"
+                },
+                {
+                    "tech_name": "Numpy",
+                    "level": "Very Good"
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Classification Odors",
+            "description": "In this project we have created a program in Python that classifies odors based on the intensity of the nerve impulse when a person smells each odor. I collected data from specific sensors that measure the intensity of the nervous impulse when smelling a particular smell, I did the research process, collected the values, and built my own data set for four scents, with it worth mentioning that I can collect more data and develop the algorithms that I used in this project to be able to classify 250 different smells.",
+            "technologies": [
+                "python: scikit learn and pandas modules.",
+                "machine learning algorithms: decision Tree, K nearest neighbours.",
+                "data preprocessing."
+            ],
+            "sourceCodeLink": "https://github.com/EbrahimMassrie963/classification-odors-depending-on-The-intensity-of-the-nervous-impulse"
+        },
+        {
+            "id": 2,
+            "title": "Predicting The Consumption Of Electrical Energy",
+            "description": "This project helps specialists in the field of electric power production to predict the electrical load of the generation station in the near future, depending on population growth and current electrical consumption, and this helps them to develop the necessary plans in the future.",
+            "technologies": [
+                "python: scikit learn, pandas, holidays, matplotlib, tensorflow, keras and xgboost modules.",
+                "machine learning algorithms: linear regression, random forest, xgboost algotithmns.",
+                "neural networks",
+                "data preprocessing techniques ."
+            ],
+            "sourceCodeLink": "https://github.com/EbrahimMassrie963/Predicting-the-consumption-of-electrical-energy"
+        },
+        {
+            "id": 3,
+            "title": "Classification Vs Regression",
+            "description": "This is not a project in itself, but this is a complete training course on data analysis in Python you will learn build regression model on house_price orediction dataset and you will learn classification techniques the most important, you will learn all data preprocessing techniques that contain cleaning and remove duplicates rows and correlated features and more .....",
+            "technologies": [
+                "python: pandas, numpy, seaborn, matplotlib modules.",
+                "machine learning algorithms: linear regression, random forest, K nearest neighbours, decision tree algotithmns."
+            ],
+            "sourceCodeLink": "https://github.com/EbrahimMassrie963/classification-vs-regression"
+        },
+        {
+            "id": 4,
+            "title": "Desktop Login With Face & Mouse Cursor Control",
+            "description": "In this project, we took pictures of the face of a specific person in various positions, and trained a machine learning model on this data, so that this person becomes the only one who is able to open his personal computer through the image of his face. We also developed the program to become an assistant for paralyzed people so that they can control various computer commands by moving the head, eyes and mouth.",
+            "technologies": [
+                "python: cv2, os, sys, modules.",
+                "machine learning algorithms: face recognition, haarcascadeclassifier and another algorithmns."
+            ],
+            "sourceCodeLink": "https://github.com/EbrahimMassrie963/Desktop-login-with-face-mouse-cursor-control-with-head-and-eye-movements"
+        }
+    ],
+    "qualification": {
+        "education": [
+            {
+                "duration": "2016 - 2022",
+                "level": "Information Technology",
+                "description": "tishreen - university"
+            },
+            {
+                "duration": "2020 - 2022",
+                "level": "Artificial Intelligence Specialization",
+                "description": "tishreen - university"
+            },
+            {
+                "duration": "2022 - now",
+                "level": "Master in Artificial Intelligence",
+                "description": "Damascus - University"
+            }
+        ],
+        "experience": [
+            {
+                "duration": "2020 - 2021",
+                "level": "Junior Machine Learning Engineer",
+                "description": "Tec Time"
+            },
+            {
+                "duration": "2021 - now",
+                "level": "Data Science",
+                "description": "Freelancer"
+            }
+        ]
+    }
+}
