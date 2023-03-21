@@ -1,35 +1,38 @@
 import { useEffect, useState } from "react";
-import Windows11OSBootScreen from "../../Components/Windows11OSBootScreen/index";
-import Windows11WelcomeScreen from "../../Components/Windows11WelcomeScreen/index";
 import "./index.min.css";
+import HomeBackground from "../../Assets/images/home.jpg";
+import { useSelector } from "react-redux";
 
-function Home({ pageTitle }) {
+const Home = ({ pageTitle }) => {
 
-    const [isShowWelcomeScreen, setIsShowWelcomeScreen] = useState(false);
+    const smothlyTextWriting = useSelector(state => state.smothlyTextWriting);
 
-    const [isShowBootScreen, setIsShowBootScreen] = useState(true);
+    const [welcomeMessage, setWelcomeMessage] = useState("");
+
+    const [whoAmI, setHowAmI] = useState("");
 
     useEffect(() => {
 
         document.title = pageTitle;
 
-        setTimeout(() => {
+        smothlyTextWriting("Welcome To You In My Portfolio", setWelcomeMessage);
 
-            setIsShowBootScreen(false);
-
-            setIsShowWelcomeScreen(true);
-
-        }, 6000);
+        smothlyTextWriting("I'am Tareq Morheg, Artificial Intelligence Engineer", setHowAmI);
 
     }, []);
 
     return (
-        // Start Home Page
-        <div className="home">
-            {isShowBootScreen && <Windows11OSBootScreen />}
-            {isShowWelcomeScreen && <Windows11WelcomeScreen />}
+        <div
+            className="home text-white"
+            style={{ background: `url(${HomeBackground})` }}
+        >
+            <div className="overlay d-flex flex-column justify-content-center align-items-center">
+                <div className="intro text-center p-4">
+                    <h1 className="welcome-msg mb-4 fw-bold">{ welcomeMessage }</h1>
+                    <h2 className="who-am-i fw-bold">{ whoAmI }</h2>
+                </div>
+            </div>
         </div>
-        // End Home Page
     );
 }
 

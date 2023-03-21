@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 const Home = lazy(() => import("./Pages/Home/index"));
+const Windows11Form = lazy(() => import("./Pages/Windows11Form/index"));
 const PageNotFound = lazy(() => import("./Pages/404/index"));
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Suspense>
         <Routes>
           <Route path="/" element={<Home pageTitle="Tareq Morheg - Home" />}></Route>
+          <Route path="/windows11-form" element={<Windows11Form pageTitle="Tareq Morheg - Windows 11 Form" />}></Route>
           <Route path="*" element={<PageNotFound pageTitle="Page Not Found" />}></Route>
         </Routes>
       </Suspense>
