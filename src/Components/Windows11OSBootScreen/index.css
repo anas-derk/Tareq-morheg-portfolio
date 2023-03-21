@@ -1,0 +1,29 @@
+.windows11-boot-screen .window11-os-icon {
+  font-size: 130px;
+  color: #0078d4;
+  border-radius: 4px;
+  opacity: 0;
+  animation: windows11BootAnimation 2s 2s forwards;
+}
+
+.windows11-boot-screen .loader {
+  opacity: 0;
+  animation: loaderAnimation 1.5s 4.5s forwards;
+}
+
+@keyframes windows11BootAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+    transform: rotate(360deg);
+  }
+  75% {
+    font-size: 100px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 130px;
+  }
+}

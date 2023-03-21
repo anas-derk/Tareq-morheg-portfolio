@@ -1,0 +1,23 @@
+.windows11-welcome-screen{
+    min-height: 100vh;
+    background-size: cover;
+    animation: windows11WelcomeScreenAnimation 1s linear 0s forwards;
+    .loader{
+        opacity: 0;
+        animation: loaderAnimation 1.5s 2s forwards;
+    }
+    .welcome-msg{
+        .user-name{
+            border-radius: 5px;
+        }
+    }
+}
+
+@keyframes windows11WelcomeScreenAnimation {
+    0% {
+        transform: scale(.5, .5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
