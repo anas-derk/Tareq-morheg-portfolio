@@ -9,14 +9,19 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, .6);
-        .intro {
+        .intro-section, .congratulations-section {
             border-radius: 5px;
             opacity: 0;
             background: rgba(255, 255, 255, .2);
             animation: fadeInDown .8s ease-in 0s forwards;
         }
-        .user-name-form{
+        form{
             width: 50%;
+            opacity: 0;
+            animation: fadeInDown .5s ease-in 2s forwards;
+        }
+        .select-operation-system-form{
+            animation: fadeInDown .5s ease-in .5s forwards;
         }
     }
 }

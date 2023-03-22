@@ -13,15 +13,21 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.home .overlay .intro {
+.home .overlay .intro-section, .home .overlay .congratulations-section {
   border-radius: 5px;
   opacity: 0;
   background: rgba(255, 255, 255, 0.2);
   animation: fadeInDown .8s ease-in 0s forwards;
 }
 
-.home .overlay .user-name-form {
+.home .overlay form {
   width: 50%;
+  opacity: 0;
+  animation: fadeInDown .5s ease-in 2s forwards;
+}
+
+.home .overlay .select-operation-system-form {
+  animation: fadeInDown .5s ease-in .5s forwards;
 }
 
 @keyframes fadeInDown {

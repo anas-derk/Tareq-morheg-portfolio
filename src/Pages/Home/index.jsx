@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import "./index.min.css";
 import HomeBackground from "../../Assets/images/home.jpg";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Home = ({ pageTitle }) => {
 
     const smothlyTextWriting = useSelector(state => state.smothlyTextWriting);
+
+    const navigate = useNavigate();
 
     const [welcomeMessage, setWelcomeMessage] = useState("");
 
@@ -13,27 +16,87 @@ const Home = ({ pageTitle }) => {
 
     const [stepsIntro, setStepsIntro] = useState("");
 
+    const [congratulationsMessage, setCongratulationsMessage] = useState("");
+
+    const [waitMessage, setWaitMessage] = useState("");
+
+    const [isShowIntroSection, setIsShowIntroSection] = useState(true);
+
+    const [isShowCongratulationsSection, setIsShowCongratulationsSection] = useState(false);
+
     const [userName, setUserName] = useState("");
 
     const [operatingSystem, setOperatingSystem] = useState("");
-
-    const [isShowIntroBox, setIsShowIntroBox] = useState(true);
 
     const [isShowUserNameForm, setIsShowUserNameForm] = useState(false);
 
     const [isShowSelectOSForm, setIsShowSelectOSForm] = useState(false);
 
+    const [isShowLoadingBtn, setIsShowLoadingBtn] = useState(false);
+
+    const [isShowLoader, setIsShowLoader] = useState(false);
+
     const userNameSubmit = (e) => {
 
         e.preventDefault();
-        
+
+        setIsShowLoadingBtn(true);
+
+        let showSelectOSFormTimeout = setTimeout(() => {
+
+            setIsShowUserNameForm(false);
+
+            setIsShowLoadingBtn(false);
+
+            localStorage.setItem("user-name-for-portfolio", userName);
+
+            setIsShowSelectOSForm(true);
+
+            clearTimeout(showSelectOSFormTimeout);
+
+        }, 2000);
+
     }
 
     const selectSystemType = (e) => {
 
         e.preventDefault();
 
-        console.log("ggg")
+        setIsShowLoadingBtn(true);
+
+        let runOSTimeout = setTimeout(() => {
+
+            setIsShowLoadingBtn(false);
+
+            localStorage.setItem("prefered-os-for-portfolio", operatingSystem);
+
+            setIsShowSelectOSForm(false);
+
+            setIsShowIntroSection(false);
+
+            setIsShowCongratulationsSection(true);
+
+            smothlyTextWriting(`Congratulations ${userName} !!`, setCongratulationsMessage);
+
+            smothlyTextWriting("Please Wait a Few Second Before Running The Prefered Operating System", setWaitMessage);
+
+            let runLoaderTimeout = setTimeout(() => {
+
+                setIsShowLoader(true);
+
+                setTimeout(() => {
+
+                    navigate("/windows11-form");
+
+                }, 3500);
+
+                clearTimeout(runLoaderTimeout);
+
+            }, 5000);
+
+            clearTimeout(runOSTimeout);
+
+        }, 2000);
 
     }
 
@@ -47,11 +110,13 @@ const Home = ({ pageTitle }) => {
 
         smothlyTextWriting("You are just a few steps away from going to see my CV details .", setStepsIntro);
 
-        setTimeout(() => {
+        let showUserNameFormTimeout = setTimeout(() => {
 
             setIsShowUserNameForm(true);
 
-        }, 2000)
+            clearTimeout(showUserNameFormTimeout);
+
+        }, 2000);
 
     }, []);
 
@@ -61,11 +126,11 @@ const Home = ({ pageTitle }) => {
             style={{ background: `url(${HomeBackground})` }}
         >
             <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                <div className="intro text-center p-4 mb-4">
-                    <h1 className="welcome-msg mb-4 fw-bold">{ welcomeMessage }</h1>
-                    <h2 className="who-am-i fw-bold mb-5">{ whoAmI }</h2>
-                    <h4 className="steps-intro mb-0">{ stepsIntro }</h4>
-                </div>
+                {isShowIntroSection && <section className="intro-section text-center p-4 mb-4">
+                    <h1 className="welcome-msg mb-4 fw-bold">{welcomeMessage}</h1>
+                    <h2 className="who-am-i fw-bold mb-4">{whoAmI}</h2>
+                    <h4 className="steps-intro mb-0">{stepsIntro}</h4>
+                </section>}
                 {isShowUserNameForm && <form className="user-name-form" onSubmit={userNameSubmit}>
                     <input
                         type="text"
@@ -74,18 +139,32 @@ const Home = ({ pageTitle }) => {
                         required
                         onChange={(e) => setUserName(e.target.value)}
                     />
-                    <button className="btn btn-success w-100 p-3">Submit</button>
+                    {!isShowLoadingBtn && <button className="btn btn-success w-100 p-3">Submit</button>}
+                    {isShowLoadingBtn && <button className="btn btn-primary w-100 p-3 loading-button" type="button" disabled>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Processing ...
+                    </button>}
                 </form>}
                 {isShowSelectOSForm && <form className="select-operation-system-form" onSubmit={selectSystemType}>
                     <select className="form-control mb-4 p-3"
                         onChange={(e) => setOperatingSystem(e.target.value)}
+                        required
                     >
-                        <option hidden>Please Select The Operating System</option>
+                        <option hidden>Please Select The Prefered Operating System</option>
                         <option value="windows-11">Windows 11</option>
                         <option value="ubunto">Ubunto</option>
                     </select>
-                    <button className="btn btn-success w-100 p-3">Submit</button>
+                    {!isShowLoadingBtn && <button className="btn btn-success w-100 p-3">Submit</button>}
+                    {isShowLoadingBtn && <button className="btn btn-primary w-100 p-3 loading-button" type="button" disabled>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Processing ...
+                    </button>}
                 </form>}
+                {isShowCongratulationsSection && <section className="congratulations-section text-center p-4 mb-4">
+                    <h1 className="congratulations-msg mb-4 fw-bold">{congratulationsMessage}</h1>
+                    <h4 className="wait-msg mb-0">{waitMessage}</h4>
+                </section>}
+                {isShowLoader && <div className="loader"></div>}
             </div>
         </div>
     );
