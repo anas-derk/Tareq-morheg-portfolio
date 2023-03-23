@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Windows11OSBootScreen from "../../Components/Windows11OSBootScreen/index";
 import Windows11WelcomeScreen from "../../Components/Windows11WelcomeScreen/index";
 import "./index.min.css";
@@ -9,17 +10,27 @@ function Windows11Form({ pageTitle }) {
 
     const [isShowBootScreen, setIsShowBootScreen] = useState(true);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
 
         document.title = pageTitle;
 
-        setTimeout(() => {
+        let userName = localStorage.getItem("user-name-for-tm-portfolio");
 
-            setIsShowBootScreen(false);
+        if (!userName) navigate("/");
 
-            setIsShowWelcomeScreen(true);
+        else {
 
-        }, 8000);
+            setTimeout(() => {
+
+                setIsShowBootScreen(false);
+    
+                setIsShowWelcomeScreen(true);
+    
+            }, 8000);
+
+        }
 
     }, []);
 

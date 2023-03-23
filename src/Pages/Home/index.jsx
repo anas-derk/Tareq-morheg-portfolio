@@ -26,11 +26,7 @@ const Home = ({ pageTitle }) => {
 
     const [userName, setUserName] = useState("");
 
-    const [operatingSystem, setOperatingSystem] = useState("");
-
     const [isShowUserNameForm, setIsShowUserNameForm] = useState(false);
-
-    const [isShowSelectOSForm, setIsShowSelectOSForm] = useState(false);
 
     const [isShowLoadingBtn, setIsShowLoadingBtn] = useState(false);
 
@@ -42,43 +38,21 @@ const Home = ({ pageTitle }) => {
 
         setIsShowLoadingBtn(true);
 
-        let showSelectOSFormTimeout = setTimeout(() => {
-
-            setIsShowUserNameForm(false);
-
-            setIsShowLoadingBtn(false);
-
-            localStorage.setItem("user-name-for-portfolio", userName);
-
-            setIsShowSelectOSForm(true);
-
-            clearTimeout(showSelectOSFormTimeout);
-
-        }, 2000);
-
-    }
-
-    const selectSystemType = (e) => {
-
-        e.preventDefault();
-
-        setIsShowLoadingBtn(true);
-
         let runOSTimeout = setTimeout(() => {
 
             setIsShowLoadingBtn(false);
 
-            localStorage.setItem("prefered-os-for-portfolio", operatingSystem);
-
-            setIsShowSelectOSForm(false);
+            setIsShowUserNameForm(false);
 
             setIsShowIntroSection(false);
+
+            localStorage.setItem("user-name-for-tm-portfolio", userName);
 
             setIsShowCongratulationsSection(true);
 
             smothlyTextWriting(`Congratulations ${userName} !!`, setCongratulationsMessage);
 
-            smothlyTextWriting("Please Wait a Few Second Before Running The Prefered Operating System", setWaitMessage);
+            smothlyTextWriting("Please Wait a Few Second Before Running The Portfolio In Form Windows 11 Operating System", setWaitMessage);
 
             let runLoaderTimeout = setTimeout(() => {
 
@@ -104,19 +78,29 @@ const Home = ({ pageTitle }) => {
 
         document.title = pageTitle;
 
-        smothlyTextWriting("Welcome To You In My Portfolio", setWelcomeMessage);
+        // Protect Window 11 Form Route ( Prevent Running The Operating System if don't have User Name )
 
-        smothlyTextWriting("I'am Tareq Morheg, Artificial Intelligence Engineer", setHowAmI);
+        let userName = localStorage.getItem("user-name-for-tm-portfolio");
 
-        smothlyTextWriting("You are just a few steps away from going to see my CV details .", setStepsIntro);
+        if (userName) navigate("/windows11-form");
 
-        let showUserNameFormTimeout = setTimeout(() => {
+        else {
 
-            setIsShowUserNameForm(true);
+            smothlyTextWriting("Welcome To You In My Portfolio", setWelcomeMessage);
 
-            clearTimeout(showUserNameFormTimeout);
+            smothlyTextWriting("I'am Tareq Morheg, Artificial Intelligence Engineer", setHowAmI);
 
-        }, 2000);
+            smothlyTextWriting("You are just a few steps away from going to see my CV details .", setStepsIntro);
+
+            let showUserNameFormTimeout = setTimeout(() => {
+
+                setIsShowUserNameForm(true);
+
+                clearTimeout(showUserNameFormTimeout);
+
+            }, 2000);
+
+        }
 
     }, []);
 
@@ -139,22 +123,7 @@ const Home = ({ pageTitle }) => {
                         required
                         onChange={(e) => setUserName(e.target.value)}
                     />
-                    {!isShowLoadingBtn && <button className="btn btn-success w-100 p-3">Submit</button>}
-                    {isShowLoadingBtn && <button className="btn btn-primary w-100 p-3 loading-button" type="button" disabled>
-                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                        Processing ...
-                    </button>}
-                </form>}
-                {isShowSelectOSForm && <form className="select-operation-system-form" onSubmit={selectSystemType}>
-                    <select className="form-control mb-4 p-3"
-                        onChange={(e) => setOperatingSystem(e.target.value)}
-                        required
-                    >
-                        <option hidden>Please Select The Prefered Operating System</option>
-                        <option value="windows-11">Windows 11</option>
-                        <option value="ubunto">Ubunto</option>
-                    </select>
-                    {!isShowLoadingBtn && <button className="btn btn-success w-100 p-3">Submit</button>}
+                    {!isShowLoadingBtn && <button className="btn btn-success w-100 p-3 user-name-submit">Submit</button>}
                     {isShowLoadingBtn && <button className="btn btn-primary w-100 p-3 loading-button" type="button" disabled>
                         <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
                         Processing ...

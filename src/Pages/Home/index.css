@@ -26,10 +26,6 @@
   animation: fadeInDown .5s ease-in 2s forwards;
 }
 
-.home .overlay .select-operation-system-form {
-  animation: fadeInDown .5s ease-in .5s forwards;
-}
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
