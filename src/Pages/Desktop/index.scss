@@ -1,0 +1,12 @@
+.desktop {
+    background-image: url("../../Assets/images/window11-welcomeScreen2.jpg.png");
+    background-size: cover;
+    min-height: 100vh;
+    .taskbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #3b3e30;
+        color: #FFF;
+    }
+}
