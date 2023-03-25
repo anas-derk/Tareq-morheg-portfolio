@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 const Home = lazy(() => import("./Pages/Home/index"));
-const Windows11Form = lazy(() => import("./Pages/Windows11Form/index"));
+const Windows11Form = lazy(() => import("./Pages/Windows11Loader/index"));
 const PageNotFound = lazy(() => import("./Pages/404/index"));
 
 function App() {
