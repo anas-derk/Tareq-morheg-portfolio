@@ -4,7 +4,7 @@ import Windows11OSBootScreen from "../../Components/Windows11OSBootScreen/index"
 import Windows11WelcomeScreen from "../../Components/Windows11WelcomeScreen/index";
 import "./index.min.css";
 
-function Windows11Form({ pageTitle }) {
+function Windows11Loader({ pageTitle }) {
 
     const [isShowWelcomeScreen, setIsShowWelcomeScreen] = useState(false);
 
@@ -35,13 +35,13 @@ function Windows11Form({ pageTitle }) {
     }, []);
 
     return (
-        // Start Windows 11 System Form
-        <div className="home">
+        // Start Windows 11 System Loader
+        <div className="windows11-loader">
             {isShowBootScreen && <Windows11OSBootScreen />}
             {isShowWelcomeScreen && <Windows11WelcomeScreen />}
         </div>
-        // End Windows 11 System Form
+        // End Windows 11 System Loader
     );
 }
 
-export default Windows11Form;
+export default Windows11Loader;

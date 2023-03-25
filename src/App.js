@@ -11,7 +11,7 @@ function App() {
       <Suspense>
         <Routes>
           <Route path="/" element={<Home pageTitle="Tareq Morheg - Home" />}></Route>
-          <Route path="/windows11-form" element={<Windows11Form pageTitle="Tareq Morheg - Windows 11 Form" />}></Route>
+          <Route path="/windows11-loader" element={<Windows11Form pageTitle="Tareq Morheg - Windows 11 Loader" />}></Route>
           <Route path="*" element={<PageNotFound pageTitle="Page Not Found" />}></Route>
         </Routes>
       </Suspense>
