@@ -27,6 +27,12 @@ function Windows11Loader({ pageTitle }) {
                 setIsShowBootScreen(false);
     
                 setIsShowWelcomeScreen(true);
+
+                setTimeout(() => {
+
+                    navigate("/desktop");
+
+                }, 5000);
     
             }, 8000);
 
