@@ -4,6 +4,8 @@ import { MdOutlineContactMail } from "react-icons/md";
 import { SiPython } from "react-icons/si";
 import { GiSkills } from "react-icons/gi";
 import { BsInfoSquare } from "react-icons/bs";
+import { MdCastForEducation } from "react-icons/md";
+import { AiOutlineExperiment } from "react-icons/ai"
 
 const Desktop = ({ pageTitle }) => {
 
@@ -23,14 +25,20 @@ const Desktop = ({ pageTitle }) => {
                         <li title="Introduction">
                             <BsInfoSquare />
                         </li>
-                        <li title="Contact Me">
-                            <MdOutlineContactMail />
-                        </li>
                         <li title="My Skills">
                             <GiSkills />
                         </li>
+                        <li title="My Eduction">
+                            <MdCastForEducation />
+                        </li>
+                        <li title="My Experience">
+                            <AiOutlineExperiment />
+                        </li>
                         <li title="My Projects">
                             <SiPython />
+                        </li>
+                        <li title="Contact Me">
+                            <MdOutlineContactMail />
                         </li>
                     </ul>
                 </section>
