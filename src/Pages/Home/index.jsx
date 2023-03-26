@@ -60,7 +60,7 @@ const Home = ({ pageTitle }) => {
 
                 setTimeout(() => {
 
-                    navigate("/windows11-form");
+                    navigate("/windows11-loader");
 
                 }, 3500);
 
