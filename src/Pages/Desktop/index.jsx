@@ -22,22 +22,28 @@ const Desktop = ({ pageTitle }) => {
                 <h1 className="page-title">Hello Desktop</h1>
                 <section className="taskbar w-100 p-1 text-center">
                     <ul className="my-info-links d-flex justify-content-center">
-                        <li title="Introduction">
+                        <li>
+                            <button className="btn tooltip-btn fw-bold">Introduction</button>
                             <BsInfoSquare />
                         </li>
-                        <li title="My Skills">
+                        <li>
+                            <button className="btn tooltip-btn fw-bold">My Skills</button>
                             <GiSkills />
                         </li>
-                        <li title="My Eduction">
+                        <li>
+                            <button className="btn tooltip-btn fw-bold">My Education</button>
                             <MdCastForEducation />
                         </li>
-                        <li title="My Experience">
+                        <li>
+                            <button className="btn tooltip-btn fw-bold">My Experience</button>
                             <AiOutlineExperiment />
                         </li>
-                        <li title="My Projects">
+                        <li>
+                            <button className="btn tooltip-btn fw-bold">My Projects</button>
                             <SiPython />
                         </li>
-                        <li title="Contact Me">
+                        <li>
+                            <button className="btn tooltip-btn fw-bold">Contact Me</button>
                             <MdOutlineContactMail />
                         </li>
                     </ul>

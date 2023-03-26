@@ -21,7 +21,41 @@
 .desktop .taskbar .my-info-links li {
   cursor: pointer;
   font-size: 32px;
+  opacity: 0;
   transition: .5s;
+  position: relative;
+}
+
+.desktop .taskbar .my-info-links li:first-of-type, .desktop .taskbar .my-info-links li:nth-of-type(2) {
+  animation: fadeInDown .5s 3s forwards;
+}
+
+.desktop .taskbar .my-info-links li:nth-of-type(3), .desktop .taskbar .my-info-links li:nth-of-type(4) {
+  animation: fadeInDown .5s 4s forwards;
+}
+
+.desktop .taskbar .my-info-links li:nth-of-type(5), .desktop .taskbar .my-info-links li:last-of-type {
+  animation: fadeInDown .5s 3.5s forwards;
+}
+
+.desktop .taskbar .my-info-links li .tooltip-btn {
+  position: absolute;
+  min-width: 140px;
+  top: -60px;
+  left: -100%;
+  background-color: #FFF;
+  opacity: 0;
+  transition: .5s;
+}
+
+.desktop .taskbar .my-info-links li .tooltip-btn::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: #FFF;
+  bottom: -21px;
+  left: calc(50% + 5px);
 }
 
 .desktop .taskbar .my-info-links li:hover {
@@ -30,6 +64,10 @@
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.desktop .taskbar .my-info-links li:hover .tooltip-btn {
+  opacity: 1;
 }
 
 @keyframes fadeInDown {

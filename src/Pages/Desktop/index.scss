@@ -15,7 +15,36 @@
             li {
                 cursor: pointer;
                 font-size: 32px;
+                opacity: 0;
                 transition: .5s;
+                position: relative;
+                &:first-of-type, &:nth-of-type(2) {
+                    animation: fadeInDown .5s 3s forwards;
+                }
+                &:nth-of-type(3), &:nth-of-type(4) {
+                    animation: fadeInDown .5s 4s forwards;
+                }
+                &:nth-of-type(5), &:last-of-type {
+                    animation: fadeInDown .5s 3.5s forwards;
+                }
+                .tooltip-btn{
+                    position: absolute;
+                    min-width: 140px;
+                    top: -60px;
+                    left: -100%;
+                    background-color: #FFF;
+                    opacity: 0;
+                    transition: .5s;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 5px;
+                        height: 20px;
+                        background-color: #FFF;
+                        bottom: -21px;
+                        left: calc(50% + 5px);
+                    }
+                }
                 &:hover {
                     background-color: #EEE;
                     color: #000;
@@ -24,6 +53,9 @@
                         left: 10px;
                         right: 10px;
                     };
+                    .tooltip-btn{
+                        opacity: 1;
+                    }
                 }
             }
         }
