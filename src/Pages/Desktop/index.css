@@ -26,15 +26,15 @@
   position: relative;
 }
 
-.desktop .taskbar .my-info-links li:first-of-type, .desktop .taskbar .my-info-links li:nth-of-type(2) {
+.desktop .taskbar .my-info-links li:first-of-type, .desktop .taskbar .my-info-links li:nth-of-type(2), .desktop .taskbar .my-info-links li:nth-of-type(3) {
   animation: fadeInDown .5s 3s forwards;
 }
 
-.desktop .taskbar .my-info-links li:nth-of-type(3), .desktop .taskbar .my-info-links li:nth-of-type(4) {
+.desktop .taskbar .my-info-links li:nth-of-type(5), .desktop .taskbar .my-info-links li:nth-of-type(6), .desktop .taskbar .my-info-links li:nth-of-type(7) {
   animation: fadeInDown .5s 4s forwards;
 }
 
-.desktop .taskbar .my-info-links li:nth-of-type(5), .desktop .taskbar .my-info-links li:last-of-type {
+.desktop .taskbar .my-info-links li:nth-of-type(4) {
   animation: fadeInDown .5s 3.5s forwards;
 }
 

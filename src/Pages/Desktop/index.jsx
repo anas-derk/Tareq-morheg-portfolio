@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import "./index.min.css";
-import { MdOutlineContactMail } from "react-icons/md";
+import { MdOutlineContactMail, MdLightbulbOutline, MdCastForEducation } from "react-icons/md";
 import { SiPython } from "react-icons/si";
 import { GiSkills } from "react-icons/gi";
 import { BsInfoSquare } from "react-icons/bs";
-import { MdCastForEducation } from "react-icons/md";
-import { AiOutlineExperiment } from "react-icons/ai"
+import { AiOutlineExperiment } from "react-icons/ai";
 
 const Desktop = ({ pageTitle }) => {
 
@@ -25,6 +24,10 @@ const Desktop = ({ pageTitle }) => {
                         <li>
                             <button className="btn tooltip-btn fw-bold">Introduction</button>
                             <BsInfoSquare />
+                        </li>
+                        <li>
+                            <button className="btn tooltip-btn fw-bold">About Me</button>
+                            <MdLightbulbOutline />
                         </li>
                         <li>
                             <button className="btn tooltip-btn fw-bold">My Skills</button>
