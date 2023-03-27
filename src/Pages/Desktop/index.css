@@ -62,25 +62,12 @@
   top: calc(50% - 2px);
 }
 
-.desktop .taskbar .my-info-links li:hover {
+.desktop .taskbar .my-info-links li:hover, .desktop .taskbar .my-info-links li.clicked {
   background-color: #EEE;
   color: #000;
   border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .desktop .taskbar .my-info-links li:hover .tooltip-btn {
   opacity: 1;
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: scale(0.5, 0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
 }
