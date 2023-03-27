@@ -54,6 +54,17 @@ ul {
   animation: rotation 1.5s linear infinite;
 }
 
+.my-details {
+  position: absolute;
+  left: 80px;
+  top: 20px;
+  width: calc(100% - 110px);
+  height: calc(100vh - 45px);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  border-radius: 5px;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
