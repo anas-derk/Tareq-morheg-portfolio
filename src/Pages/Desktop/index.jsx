@@ -32,6 +32,8 @@ const Desktop = ({ pageTitle }) => {
 
     const [clickedIconIndex, set_clicked_icon_index] = useState(-1);
 
+    const [is_window_maximize, set_is_window_maximize] = useState(false);
+
     const my_info_icons_data = [
         {
             id: 0,
@@ -185,47 +187,82 @@ const Desktop = ({ pageTitle }) => {
     return (
         // Start Desktop Page
         <div className="desktop">
-            {isShowIntroduction && <section className="window">
+            {isShowIntroduction && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
-                <TopControlBar page_title="Introduction" />
+                <TopControlBar
+                    page_title="Introduction"
+                    setIsAppearedComponent={setIsShowIntroduction}
+                    set_clicked_icon_index={set_clicked_icon_index}
+                    set_is_window_maximize={set_is_window_maximize}
+                />
                 {/* End Top Control Bar Section */}
                 <Introduction page_title="Introduction" />
             </section>}
-            {isShowAboutMe && <section className="window">
+            {isShowAboutMe && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
-                <TopControlBar page_title="About Me" />
+                <TopControlBar
+                    page_title="About Me"
+                    setIsAppearedComponent={setIsShowAboutMe}
+                    set_clicked_icon_index={set_clicked_icon_index}
+                    set_is_window_maximize={set_is_window_maximize}
+                />
                 {/* End Top Control Bar Section */}
                 <AboutMe page_title="About Me" />
             </section>}
-            {isShowMySkills && <section className="window">
+            {isShowMySkills && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
-                <TopControlBar page_title="My Skills" />
+                <TopControlBar
+                    page_title="My Skills"
+                    setIsAppearedComponent={setIsShowMySkills}
+                    set_clicked_icon_index={set_clicked_icon_index}
+                    set_is_window_maximize={set_is_window_maximize}
+                />
                 {/* End Top Control Bar Section */}
                 <MySkills page_title="My Skills" />
             </section>}
-            {isShowMyEducation && <section className="window">
+            {isShowMyEducation && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
-                <TopControlBar page_title="My Education" />
+                <TopControlBar
+                    page_title="My Education"
+                    setIsAppearedComponent={setIsShowMyEducation}
+                    set_clicked_icon_index={set_clicked_icon_index}
+                    set_is_window_maximize={set_is_window_maximize}
+                />
                 {/* End Top Control Bar Section */}
                 <MyEducation page_title="My Education" />
             </section>}
-            {isShowMyExperience && <section className="window">
+            {isShowMyExperience && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
-                <TopControlBar page_title="My Experience" />
+                <TopControlBar
+                    page_title="My Experience"
+                    setIsAppearedComponent={setIsShowMyExperience}
+                    set_clicked_icon_index={set_clicked_icon_index}
+                    set_is_window_maximize={set_is_window_maximize}
+                />
                 {/* End Top Control Bar Section */}
                 <MyExperience page_title="My Experience" />
             </section>}
-            {isShowMyProjects && <section className="window">
+            {isShowMyProjects && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
-                <TopControlBar page_title="My Projects" />
+                <TopControlBar
+                    page_title="My Projects"
+                    setIsAppearedComponent={setIsShowMyProjects}
+                    set_clicked_icon_index={set_clicked_icon_index}
+                    set_is_window_maximize={set_is_window_maximize}
+                />
                 {/* End Top Control Bar Section */}
                 <MyProjects page_title="My Projects" />
             </section>}
-            {isShowContactMe && <section className="window">
+            {isShowContactMe && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
-                <TopControlBar page_title="Contact Me" />
+                <TopControlBar
+                    page_title="Contact Me"
+                    setIsAppearedComponent={setIsShowContactMe}
+                    set_clicked_icon_index={set_clicked_icon_index}
+                    set_is_window_maximize={set_is_window_maximize}
+                />
                 {/* End Top Control Bar Section */}
-                <ContactMe page_title="Contact Me" />    
+                <ContactMe page_title="Contact Me" />
             </section>}
             <section className="taskbar p-1 text-center">
                 <ul className="my-info-links d-flex flex-column justify-content-center">
