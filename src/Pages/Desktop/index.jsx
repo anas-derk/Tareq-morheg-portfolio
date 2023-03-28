@@ -12,6 +12,7 @@ import MyEducation from "../../Components/MyEducation/index";
 import MyExperience from "../../Components/MyExperience/index";
 import MyProjects from "../../Components/MyProjects/index";
 import ContactMe from "../../Components/ContactMe/index";
+import TopControlBar from "../../Components/TopControlBar/index";
 
 const Desktop = ({ pageTitle }) => {
 
@@ -89,7 +90,7 @@ const Desktop = ({ pageTitle }) => {
 
         }
 
-    } 
+    }
 
     const openPage = (page_title) => {
 
@@ -184,17 +185,52 @@ const Desktop = ({ pageTitle }) => {
     return (
         // Start Desktop Page
         <div className="desktop">
-            {isShowIntroduction && <Introduction page_title="Introduction" />}
-            {isShowAboutMe && <AboutMe page_title="About Me" />}
-            {isShowMySkills && <MySkills page_title="My Skills" />}
-            {isShowMyEducation && <MyEducation page_title="My Education" />}
-            {isShowMyExperience && <MyExperience page_title="My Experience" />}
-            {isShowMyProjects && <MyProjects page_title="My Projects" />}
-            {isShowContactMe && <ContactMe page_title="Contact Me" />}
+            {isShowIntroduction && <section className="window">
+                {/* Start Top Control Bar Section */}
+                <TopControlBar page_title="Introduction" />
+                {/* End Top Control Bar Section */}
+                <Introduction page_title="Introduction" />
+            </section>}
+            {isShowAboutMe && <section className="window">
+                {/* Start Top Control Bar Section */}
+                <TopControlBar page_title="About Me" />
+                {/* End Top Control Bar Section */}
+                <AboutMe page_title="About Me" />
+            </section>}
+            {isShowMySkills && <section className="window">
+                {/* Start Top Control Bar Section */}
+                <TopControlBar page_title="My Skills" />
+                {/* End Top Control Bar Section */}
+                <MySkills page_title="My Skills" />
+            </section>}
+            {isShowMyEducation && <section className="window">
+                {/* Start Top Control Bar Section */}
+                <TopControlBar page_title="My Education" />
+                {/* End Top Control Bar Section */}
+                <MyEducation page_title="My Education" />
+            </section>}
+            {isShowMyExperience && <section className="window">
+                {/* Start Top Control Bar Section */}
+                <TopControlBar page_title="My Experience" />
+                {/* End Top Control Bar Section */}
+                <MyExperience page_title="My Experience" />
+            </section>}
+            {isShowMyProjects && <section className="window">
+                {/* Start Top Control Bar Section */}
+                <TopControlBar page_title="My Projects" />
+                {/* End Top Control Bar Section */}
+                <MyProjects page_title="My Projects" />
+            </section>}
+            {isShowContactMe && <section className="window">
+                {/* Start Top Control Bar Section */}
+                <TopControlBar page_title="Contact Me" />
+                {/* End Top Control Bar Section */}
+                <ContactMe page_title="Contact Me" />    
+            </section>}
             <section className="taskbar p-1 text-center">
                 <ul className="my-info-links d-flex flex-column justify-content-center">
                     {my_info_icons_data.map((el, index) =>
-                        <li key={el.id} className={clickedIconIndex === el.id ? "clicked": "" }>
+                        <li key={el.id} className={clickedIconIndex === el.id ? "clicked" : ""}>
                             <button className="btn tooltip-btn fw-bold">{el.title}</button>
                             {el.icon}
                         </li>
