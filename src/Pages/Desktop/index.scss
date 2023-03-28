@@ -14,12 +14,13 @@
         animation: fadeInDown 1s 0s forwards;
         transition: .3s;
         .my-details{
-            background-color: rgba(255, 255, 255, .5);
+            background-color: rgba(255, 255, 255, .8);
             color: #000;
             border-radius: 5px;
             height: calc(100% - 40px);
             border-top-right-radius: 0;
             border-top-left-radius: 0;
+            overflow-y: auto;
         }
         &.maximize{
             left: 60px;

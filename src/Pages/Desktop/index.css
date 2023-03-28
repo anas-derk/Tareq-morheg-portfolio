@@ -18,12 +18,13 @@
 }
 
 .desktop .window .my-details {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   color: #000;
   border-radius: 5px;
   height: calc(100% - 40px);
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  overflow-y: auto;
 }
 
 .desktop .window.maximize {

@@ -196,7 +196,7 @@ const Desktop = ({ pageTitle }) => {
                     set_is_window_maximize={set_is_window_maximize}
                 />
                 {/* End Top Control Bar Section */}
-                <Introduction page_title="Introduction" />
+                <Introduction />
             </section>}
             {isShowAboutMe && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
@@ -207,7 +207,7 @@ const Desktop = ({ pageTitle }) => {
                     set_is_window_maximize={set_is_window_maximize}
                 />
                 {/* End Top Control Bar Section */}
-                <AboutMe page_title="About Me" />
+                <AboutMe />
             </section>}
             {isShowMySkills && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
@@ -218,7 +218,7 @@ const Desktop = ({ pageTitle }) => {
                     set_is_window_maximize={set_is_window_maximize}
                 />
                 {/* End Top Control Bar Section */}
-                <MySkills page_title="My Skills" />
+                <MySkills />
             </section>}
             {isShowMyEducation && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
@@ -229,7 +229,7 @@ const Desktop = ({ pageTitle }) => {
                     set_is_window_maximize={set_is_window_maximize}
                 />
                 {/* End Top Control Bar Section */}
-                <MyEducation page_title="My Education" />
+                <MyEducation />
             </section>}
             {isShowMyExperience && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
@@ -240,7 +240,7 @@ const Desktop = ({ pageTitle }) => {
                     set_is_window_maximize={set_is_window_maximize}
                 />
                 {/* End Top Control Bar Section */}
-                <MyExperience page_title="My Experience" />
+                <MyExperience />
             </section>}
             {isShowMyProjects && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
@@ -251,7 +251,7 @@ const Desktop = ({ pageTitle }) => {
                     set_is_window_maximize={set_is_window_maximize}
                 />
                 {/* End Top Control Bar Section */}
-                <MyProjects page_title="My Projects" />
+                <MyProjects />
             </section>}
             {isShowContactMe && <section className={is_window_maximize ? "window maximize": "window"}>
                 {/* Start Top Control Bar Section */}
@@ -262,7 +262,7 @@ const Desktop = ({ pageTitle }) => {
                     set_is_window_maximize={set_is_window_maximize}
                 />
                 {/* End Top Control Bar Section */}
-                <ContactMe page_title="Contact Me" />
+                <ContactMe />
             </section>}
             <section className="taskbar p-1 text-center">
                 <ul className="my-info-links d-flex flex-column justify-content-center">
