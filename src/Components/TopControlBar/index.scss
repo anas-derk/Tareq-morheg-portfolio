@@ -1,0 +1,26 @@
+.top-control-bar{
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #3b3e30;
+    color: #FFF;
+    .page-title{
+        font-size: 18px;
+        line-height: 40px;
+        border-radius: inherit;
+    }
+    .icons-control-list{
+        .control-icon{
+            cursor: pointer;
+            padding: 10px;
+            font-size: 40px;
+            &.close-icon:hover{
+                background-color: #F00;
+            }
+            &.maximize-icon:hover, &.minimize-icon:hover{
+                background-color: rgba($color: #FFF, $alpha: 0.5);
+                color: #000;
+            }
+        }
+    }
+}

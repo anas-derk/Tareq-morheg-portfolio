@@ -184,13 +184,13 @@ const Desktop = ({ pageTitle }) => {
     return (
         // Start Desktop Page
         <div className="desktop">
-            {isShowIntroduction && <Introduction />}
-            {isShowAboutMe && <AboutMe />}
-            {isShowMySkills && <MySkills />}
-            {isShowMyEducation && <MyEducation />}
-            {isShowMyExperience && <MyExperience />}
-            {isShowMyProjects && <MyProjects />}
-            {isShowContactMe && <ContactMe />}
+            {isShowIntroduction && <Introduction page_title="Introduction" />}
+            {isShowAboutMe && <AboutMe page_title="About Me" />}
+            {isShowMySkills && <MySkills page_title="My Skills" />}
+            {isShowMyEducation && <MyEducation page_title="My Education" />}
+            {isShowMyExperience && <MyExperience page_title="My Experience" />}
+            {isShowMyProjects && <MyProjects page_title="My Projects" />}
+            {isShowContactMe && <ContactMe page_title="Contact Me" />}
             <section className="taskbar p-1 text-center">
                 <ul className="my-info-links d-flex flex-column justify-content-center">
                     {my_info_icons_data.map((el, index) =>
