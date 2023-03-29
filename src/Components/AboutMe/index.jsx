@@ -1,6 +1,7 @@
 import my_data from "../../Assets/myData/my_data.json";
 import { useSelector } from "react-redux";
 import "./index.min.css";
+import { FaDownload } from "react-icons/fa";
 
 const AboutMe = () => {
 
@@ -10,7 +11,7 @@ const AboutMe = () => {
 
     return (
         // Start About Me
-        <div className="about-me my-details ps-4 pe-4 d-flex flex-column justify-content-center">
+        <div className="about-me my-details p-4">
             <h1 className="my-name text-center mb-5 bg-danger pt-4 pb-4 fw-bold">Tareq Morheg</h1>
             <section className="caption-section">
                 <p className="mb-4 summary-description">{my_data.about_me.summary_description}</p>
@@ -38,7 +39,7 @@ const AboutMe = () => {
                     </div>
                 </div>
             </section>
-            <section className="contact-links-section">
+            <section className="contact-links-section mb-5 ">
                 <ul className="contact-links-list mt-5 text-center d-flex justify-content-center">
                     {linksIconsComponents.map((icon, index) =>
                         <li className={`icon ${index !== linksIconsComponents.length - 1 ? "me-5" : ""}`} key={index}>
@@ -46,6 +47,16 @@ const AboutMe = () => {
                         </li>
                     )}
                 </ul>
+            </section>
+            <section className="display-cv-section">
+                <a
+                    className="btn btn-danger p-3 d-block mx-auto form-control"
+                    href="https://seirah.com/sbc6fe20246?lang=en"
+                    target="_blank"
+                >
+                    <span className="me-2">Show CV</span>
+                    <FaDownload />
+                </a>
             </section>
         </div>
         // End About Me
