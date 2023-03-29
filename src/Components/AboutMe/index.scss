@@ -1,0 +1,45 @@
+.about-me{
+    .my-name{
+        border: 2px solid #000;
+        border-radius: 3px;
+        color: #FFF;
+    }
+    .caption-section{
+        .summary-description{
+            text-align: justify;
+            line-height: 2.5;
+            @media (max-width: 991px) {
+                text-align: center;
+                line-height: 2.5;
+            }
+        }
+        .info-box{
+            background-color: #FFF;
+            transition: .8s;
+            border-radius: 5px;
+            border: 2px dashed #FFF;
+            &:hover{
+                background-color: #dc3545;
+                color: #FFF;
+                box-shadow: 1px 1px 15px var(--main-background-color);
+            }
+        }
+    }
+    .contact-links-section{
+        .contact-links-list {
+            li {
+                font-size: 33px;
+                .icon {
+                    color: #FFF;
+                    background-color: var(--main-background-color);
+                    transition: .5s;
+                    border-radius: 3px;
+                    transition: 1s;
+                    &:hover{
+                        background-color: #dc3545;
+                    }
+                }
+            }
+        }
+    }
+}

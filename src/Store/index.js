@@ -1,6 +1,18 @@
 import { createStore } from "redux";
+import {
+    FaFacebookF,
+    FaLinkedinIn,
+    FaGithub,
+    FaInstagram,
+} from 'react-icons/fa';
 
 const initState = {
+    linksIconsComponents: [
+        <FaFacebookF />,
+        <FaLinkedinIn />,
+        <FaGithub />,
+        <FaInstagram />
+    ],
     smothlyTextWriting: (text, setterFunc, duration = 50) => {
         let charIndex = 0;
         let textInternval = setInterval(() => {

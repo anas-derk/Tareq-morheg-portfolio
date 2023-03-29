@@ -30,7 +30,7 @@
         }
     }
     .taskbar {
-        background-color: #3b3e30;
+        background-color: var(--main-background-color);
         color: #FFF;
         position: fixed;
         left: 0;
