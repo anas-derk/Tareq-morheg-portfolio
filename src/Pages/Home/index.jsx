@@ -109,8 +109,8 @@ const Home = ({ pageTitle }) => {
             className="home text-white"
             style={{ background: `url(${HomeBackground})` }}
         >
-            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                {isShowIntroSection && <section className="intro-section text-center p-4 mb-4">
+            <div className="overlay d-flex flex-column justify-content-center align-items-center p-5">
+                {isShowIntroSection && <section className="intro-section text-center p-4 mb-5">
                     <h1 className="welcome-msg mb-4 fw-bold">{welcomeMessage}</h1>
                     <h2 className="who-am-i fw-bold mb-4">{whoAmI}</h2>
                     <h4 className="steps-intro mb-0">{stepsIntro}</h4>

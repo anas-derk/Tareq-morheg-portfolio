@@ -20,10 +20,66 @@
   animation: fadeInDown .8s ease-in 0s forwards;
 }
 
+@media (max-width: 370px) {
+  .home .overlay .intro-section, .home .overlay .congratulations-section {
+    margin-bottom: 30px !important;
+  }
+  .home .overlay .intro-section h1, .home .overlay .congratulations-section h1 {
+    font-size: 24px;
+    line-height: 1.7;
+    margin-bottom: 10px !important;
+  }
+  .home .overlay .intro-section h2, .home .overlay .congratulations-section h2 {
+    font-size: 19px;
+    line-height: 2;
+  }
+  .home .overlay .intro-section h4, .home .overlay .congratulations-section h4 {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 331px) {
+  .home .overlay .intro-section, .home .overlay .congratulations-section {
+    margin-bottom: 12px !important;
+  }
+}
+
 .home .overlay form {
   width: 50%;
   opacity: 0;
   animation: fadeInDown .5s ease-in 2s forwards;
+}
+
+@media (max-width: 870px) {
+  .home .overlay form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 871px) and (max-width: 1199px) {
+  .home .overlay form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 370px) {
+  .home .overlay form input, .home .overlay form button {
+    padding: 14px !important;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 331px) {
+  .home .overlay form input, .home .overlay form button {
+    padding: 10px !important;
+  }
+}
+
+@media (max-width: 331px) {
+  .home .overlay form input {
+    margin-bottom: 15px !important;
+  }
 }
 
 @keyframes fadeInDown {

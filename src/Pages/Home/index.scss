@@ -14,11 +14,50 @@
             opacity: 0;
             background: rgba(255, 255, 255, .2);
             animation: fadeInDown .8s ease-in 0s forwards;
+            @media (max-width: 370px) {
+                margin-bottom: 30px !important;
+                h1 {
+                    font-size: 24px;
+                    line-height: 1.7;
+                    margin-bottom: 10px !important;
+                }
+                h2{
+                    font-size: 19px;
+                    line-height: 2;
+                }
+                h4{
+                    font-size: 18px;
+                    line-height: 1.6;
+                }
+            }
+            @media (max-width: 331px) {
+                margin-bottom: 12px !important;
+            }
         }
         form{
             width: 50%;
             opacity: 0;
             animation: fadeInDown .5s ease-in 2s forwards;
+            @media (max-width: 870px) {
+                width: 100%;
+            }
+            @media (min-width: 871px) and (max-width: 1199px) {
+                width: 75%;
+            }
+            input, button{
+                @media (max-width: 370px) {
+                    padding: 14px !important;
+                    font-size: 15px;
+                }
+                @media (max-width: 331px) {
+                    padding: 10px !important;
+                }
+            }
+            input {
+                @media (max-width: 331px) {
+                    margin-bottom: 15px !important;
+                }
+            }
         }
     }
 }

@@ -9,6 +9,17 @@
   animation: loaderAnimation 1.5s 2s forwards;
 }
 
+.windows11-welcome-screen .my-image {
+  max-width: 100%;
+  height: 230px;
+  border-radius: 50%;
+  border: 4px solid;
+}
+
+.windows11-welcome-screen .welcome-msg {
+  line-height: 2.5;
+}
+
 .windows11-welcome-screen .welcome-msg .user-name {
   border-radius: 5px;
 }
