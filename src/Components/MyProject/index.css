@@ -6,14 +6,6 @@
   transition: .5s;
 }
 
-.project-box:hover {
-  border-radius: 0;
-  border-top-right-radius: 35px;
-  border-left: 5px solid #000;
-  background-color: #dc3545;
-  color: #000;
-}
-
 .project-box .name-and-description-box {
   background-color: #FFF;
   color: #000;
@@ -66,6 +58,15 @@
   margin-left: 0;
 }
 
-.project-box .source-code-link:hover {
-  background-color: #000;
+.project-box:hover {
+  border-radius: 0;
+  border-top-right-radius: 35px;
+  border-left: 5px solid #000;
+  background-color: #dc3545;
+  color: #000;
+}
+
+.project-box:hover .source-code-link {
+  background-color: #FFF !important;
+  color: #000;
 }

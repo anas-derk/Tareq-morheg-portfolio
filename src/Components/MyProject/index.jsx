@@ -14,7 +14,7 @@ const MyProject = ({ title, description, technologies, sourceCodeLink }) => {
                     <li className="text-uppercase" key={index}>{technology}</li>
                 ))}
             </ul>
-            <a href={sourceCodeLink} className="source-code-link btn d-block fw-bold"
+            <a href={sourceCodeLink} className="source-code-link btn d-block fw-bold bg-danger"
                 target="_blank">
                 Code Link On Github
             </a>

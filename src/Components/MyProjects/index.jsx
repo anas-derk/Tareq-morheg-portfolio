@@ -7,9 +7,8 @@ const MyProjects = () => {
         <div className="my-projects my-details p-4">
             <div className="row">
                 {my_data.projects.map((project, index) => (
-                    <div className="col-md-6">
+                    <div className="col-md-6" key={index}>
                         <MyProject
-                            key={index}
                             title={project.title}
                             description={project.description}
                             technologies={project.technologies}
