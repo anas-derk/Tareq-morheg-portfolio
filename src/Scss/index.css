@@ -54,6 +54,10 @@ ul {
   animation: rotation 1.5s linear infinite;
 }
 
+.my-education, .my-experience {
+  gap: 30px;
+}
+
 .my-education .details-box, .my-experience .details-box {
   border-radius: 5px;
   transition: .5s;
