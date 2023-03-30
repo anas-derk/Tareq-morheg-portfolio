@@ -1,0 +1,66 @@
+$mainColor: #000;
+.project-box{
+    margin-bottom: 35px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px $mainColor;
+    color: #FFF;
+    transition: .5s;
+    &:hover{
+        border-radius: 0;
+        border-top-right-radius: 35px;
+        border-left: 5px solid $mainColor;
+        background-color: #dc3545;
+        color: $mainColor;
+    }
+    .name-and-description-box{
+        background-color: #FFF;
+        color: $mainColor;
+        margin-bottom: 20px;
+        border-top-right-radius: 15px;
+        border: 2px solid $mainColor;
+        .project-title{
+            border-bottom: 2px dashed $mainColor;
+            padding: {
+                top: 5px;
+                bottom: 15px;
+            };
+            margin-bottom: 20px
+        }
+        .project-description-heading{
+            border: 2px solid $mainColor;
+        }
+    }
+    .project-technologies-heading{
+        color: #000;
+        border-left: 5px solid $mainColor;
+        background-color: #FFF;
+    }
+    .technologies-list{
+        list-style-type: square;
+        list-style-position: inside;
+        background-color: #FFF;
+        border: 2px solid $mainColor;
+        li{
+            padding: 15px;
+            color: #000;
+            &:not(:last-child){
+                border-bottom: 2px solid $mainColor;
+            }
+        }
+    }
+    .source-code-link{
+        // background-color: $mainColor;
+        color: #FFF;
+        padding: {
+            top: 10px;
+            bottom: 10px;
+        }
+        transition: 1s;
+        &:nth-child(2) {
+            margin-left: 0
+        }
+        &:hover{
+            background-color: $mainColor;
+        }
+    }
+}
