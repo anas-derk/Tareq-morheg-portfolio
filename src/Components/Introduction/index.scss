@@ -27,9 +27,8 @@
                 text-align: justify;
             }
             @media (max-width: 991px) {
-                &:hover{
-                    margin: 30px;
-                }
+                text-align: center;
+                margin-bottom: 30px;
             }
         }
         .my-image{
@@ -44,6 +43,9 @@
                 border-bottom-left-radius: 15px;
                 border-bottom-color: red;
                 border-top-color: green;
+            }
+            @media (max-width: 576px) {
+                height: auto;
             }
         }
     }

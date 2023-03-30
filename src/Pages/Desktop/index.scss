@@ -13,6 +13,9 @@
         opacity: 0;
         animation: fadeInDown 1s 0s forwards;
         transition: .3s;
+        @media (max-width: 410px) {
+            height: calc(100vh - 80px);
+        }
         .my-details{
             background-color: rgba(255, 255, 255, .8);
             color: #000;
@@ -21,12 +24,19 @@
             border-top-right-radius: 0;
             border-top-left-radius: 0;
             overflow-y: auto;
+            @media (max-width: 410px) {
+                height: calc(100% - 80px);
+            }
         }
         &.maximize{
             left: 60px;
             top: 0;
             width: calc(100% - 60px);
             height: 100%;
+            @media (max-width: 576px) {
+                left: 50px;
+                width: calc(100% - 50px);
+            }
         }
     }
     .taskbar {
@@ -37,6 +47,9 @@
         top: 0;
         width: 60px;
         height: 100%;
+        @media (max-width: 576px) {
+            width: 50px;
+        }
         .my-info-links{
             height: inherit;
             gap: 30px;
@@ -62,7 +75,7 @@
                     top: 2px;
                     left: 82px;
                     background-color: #FFF;
-                    opacity: 0;
+                    display: none;
                     transition: .5s;
                     &::after{
                         content: "";
@@ -81,7 +94,7 @@
                 }
                 &:hover {
                     .tooltip-btn{
-                        opacity: 1;
+                        display: block;
                     }
                 }
             }

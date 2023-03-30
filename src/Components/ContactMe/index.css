@@ -15,9 +15,15 @@
 }
 
 .contact-me .contact-me-form textarea, .contact-me .contact-me-form input {
-  background-color: #CCC;
+  background-color: #FFF;
   border: none;
   color: #000;
+}
+
+@media (max-width: 480px) {
+  .contact-me .contact-me-form textarea, .contact-me .contact-me-form input {
+    padding: 15px !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -40,6 +46,12 @@
   background-color: #7668bd !important;
 }
 
+@media (max-width: 480px) {
+  .contact-me .contact-me-form .send-message-btn {
+    padding: 15px !important;
+  }
+}
+
 @media (max-width: 767px) {
   .contact-me .contact-me-form .send-message-btn {
     margin-bottom: 1.5rem;
@@ -55,6 +67,13 @@
 .contact-me .contact-me-form .contact-links {
   justify-content: space-around;
   font-size: 25px;
+}
+
+@media (max-width: 480px) {
+  .contact-me .contact-me-form .contact-links {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .contact-me .contact-me-form .contact-links .link {

@@ -8,19 +8,33 @@
         font-size: 18px;
         line-height: 40px;
         border-radius: inherit;
+        @media (max-width: 410px) {
+            width: 100%;
+            text-align: center;
+        }
     }
     .icons-control-list{
-        .control-icon{
-            cursor: pointer;
-            padding: 10px;
-            font-size: 40px;
-            &.close-icon:hover{
-                background-color: #F00;
-            }
-            &.maximize-icon:hover, &.minimize-icon:hover{
-                background-color: rgba($color: #FFF, $alpha: 0.5);
-                color: #000;
+        li{
+            .control-icon{
+                cursor: pointer;
+                padding: 10px;
+                font-size: 40px;
+                &.close-icon:hover{
+                    background-color: #F00;
+                }
+                &.maximize-icon:hover, &.minimize-icon:hover{
+                    background-color: rgba($color: #FFF, $alpha: 0.5);
+                    color: #000;
+                }
             }
         }
+        @media (max-width: 410px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    @media (max-width: 410px) {
+        flex-direction: column;
     }
 }

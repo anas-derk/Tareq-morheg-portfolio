@@ -12,17 +12,38 @@
   border-radius: inherit;
 }
 
-.top-control-bar .icons-control-list .control-icon {
+@media (max-width: 410px) {
+  .top-control-bar .page-title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-control-bar .icons-control-list li .control-icon {
   cursor: pointer;
   padding: 10px;
   font-size: 40px;
 }
 
-.top-control-bar .icons-control-list .control-icon.close-icon:hover {
+.top-control-bar .icons-control-list li .control-icon.close-icon:hover {
   background-color: #F00;
 }
 
-.top-control-bar .icons-control-list .control-icon.maximize-icon:hover, .top-control-bar .icons-control-list .control-icon.minimize-icon:hover {
+.top-control-bar .icons-control-list li .control-icon.maximize-icon:hover, .top-control-bar .icons-control-list li .control-icon.minimize-icon:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #000;
+}
+
+@media (max-width: 410px) {
+  .top-control-bar .icons-control-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 410px) {
+  .top-control-bar {
+    flex-direction: column;
+  }
 }

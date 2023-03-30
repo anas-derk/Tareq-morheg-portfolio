@@ -16,24 +16,41 @@
   }
 }
 
-.about-me .caption-section .info-box {
+@media (max-width: 767px) {
+  .about-me .caption-section .row {
+    gap: 30px;
+  }
+}
+
+.about-me .caption-section .row .info-box {
   background-color: #FFF;
   transition: .8s;
   border-radius: 5px;
   border: 2px dashed #FFF;
 }
 
-.about-me .caption-section .info-box:hover {
+.about-me .caption-section .row .info-box:hover {
   background-color: #dc3545;
   color: #FFF;
   box-shadow: 1px 1px 15px var(--main-background-color);
+}
+
+.about-me .contact-links-section .contact-links-list {
+  gap: 30px;
+}
+
+@media (max-width: 500px) {
+  .about-me .contact-links-section .contact-links-list {
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 
 .about-me .contact-links-section .contact-links-list li {
   font-size: 33px;
 }
 
-.about-me .contact-links-section .contact-links-list li .icon {
+.about-me .contact-links-section .contact-links-list li .link-icon {
   color: #FFF;
   background-color: var(--main-background-color);
   transition: .5s;
@@ -41,6 +58,6 @@
   transition: 1s;
 }
 
-.about-me .contact-links-section .contact-links-list li .icon:hover {
+.about-me .contact-links-section .contact-links-list li .link-icon:hover {
   background-color: #dc3545;
 }

@@ -12,9 +12,12 @@
     }
     .contact-me-form{
         textarea, input{
-            background-color: #CCC;
+            background-color: #FFF;
             border: none;
             color: #000;
+            @media (max-width: 480px) {
+                padding: 15px !important;
+            }
         }
         @media (max-width: 991px) {
             .name-input{
@@ -31,6 +34,9 @@
             &:hover {
                 background-color: #7668bd !important;
             }
+            @media (max-width: 480px) {
+                padding: 15px !important;
+            }
             @media (max-width: 767px) {
                 margin-bottom: 1.5rem;
             }
@@ -41,6 +47,10 @@
         .contact-links{
             justify-content: space-around;
             font-size: 25px;
+            @media (max-width: 480px) {
+                flex-direction: column;
+                gap: 30px;
+            }
             .link{
                 background-color: var(--main-background-color);
                 border-radius: 5px;

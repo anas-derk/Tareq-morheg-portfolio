@@ -19,7 +19,7 @@ const ContactMe = () => {
 
     return (
         // Start Contact Me
-        <div className="contact-me my-details p-4">
+        <div className="contact-me my-details p-4 d-grid">
             {/* Start Grid System */}
             <div className="row align-items-center">
                 {/* Start Column */}

@@ -13,23 +13,33 @@
                 line-height: 2.5;
             }
         }
-        .info-box{
-            background-color: #FFF;
-            transition: .8s;
-            border-radius: 5px;
-            border: 2px dashed #FFF;
-            &:hover{
-                background-color: #dc3545;
-                color: #FFF;
-                box-shadow: 1px 1px 15px var(--main-background-color);
+        .row{
+            @media (max-width: 767px) {
+                gap: 30px;
+            }
+            .info-box{
+                background-color: #FFF;
+                transition: .8s;
+                border-radius: 5px;
+                border: 2px dashed #FFF;
+                &:hover{
+                    background-color: #dc3545;
+                    color: #FFF;
+                    box-shadow: 1px 1px 15px var(--main-background-color);
+                }
             }
         }
     }
     .contact-links-section{
         .contact-links-list {
+            gap: 30px;
+            @media (max-width: 500px) {
+                flex-direction: column;
+                gap: 50px;
+            }
             li {
                 font-size: 33px;
-                .icon {
+                .link-icon {
                     color: #FFF;
                     background-color: var(--main-background-color);
                     transition: .5s;
