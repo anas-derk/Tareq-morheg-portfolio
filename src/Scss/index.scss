@@ -52,6 +52,38 @@ ul{
     }
 }
 
+.my-education, .my-experience{
+    .details-box{
+        border-radius: 5px;
+        transition: .5s;
+        border: 2px dashed #dc3545;
+        &:hover{
+            border-radius: 0;
+            border-top-right-radius: 35px;
+            background-color: #dc3545 !important;
+            color: #FFF;
+            box-shadow: 1px 1px 15px var(--main-background-color);
+            border: 2px dashed #FFF;
+            .box-number{
+                background-color: #FFF;
+                color: #000;
+            }
+        }
+        .box-number{
+            background-color: #dc3545;
+            width: 50px;
+            height: 50px;
+            color: #FFF;
+            line-height: 50px;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);

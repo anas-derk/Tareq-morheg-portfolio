@@ -54,6 +54,42 @@ ul {
   animation: rotation 1.5s linear infinite;
 }
 
+.my-education .details-box, .my-experience .details-box {
+  border-radius: 5px;
+  transition: .5s;
+  border: 2px dashed #dc3545;
+}
+
+.my-education .details-box:hover, .my-experience .details-box:hover {
+  border-radius: 0;
+  border-top-right-radius: 35px;
+  background-color: #dc3545 !important;
+  color: #FFF;
+  box-shadow: 1px 1px 15px var(--main-background-color);
+  border: 2px dashed #FFF;
+}
+
+.my-education .details-box:hover .box-number, .my-experience .details-box:hover .box-number {
+  background-color: #FFF;
+  color: #000;
+}
+
+.my-education .details-box .box-number, .my-experience .details-box .box-number {
+  background-color: #dc3545;
+  width: 50px;
+  height: 50px;
+  color: #FFF;
+  line-height: 50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+@media (max-width: 767px) {
+  .my-education .details-box, .my-experience .details-box {
+    margin-bottom: 40px;
+  }
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
