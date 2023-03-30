@@ -33,7 +33,7 @@ const MySkills = () => {
             <div className="skills-info">
                 {my_data.skills.map((skill_data, index) =>
                     /* Start Grid System */
-                    <div className="row align-items-center pt-3 pb-3 bg-white skill-box">
+                    <div className="row align-items-center pt-3 pb-3 bg-white skill-box" key={index}>
                         {/* Start Column */}
                         <div className={`col-md-1 text-center ${windowInnerWidth < 767 ? "mb-3" : ""}`}>
                             <span className="skill-num">{index + 1}</span>
